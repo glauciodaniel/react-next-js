@@ -15,21 +15,6 @@ const HeaderPage = styled.header`
   padding: 0 10%;
 `
 
-
-
-// type UserType = {
-//   email: string;
-//   password: string;
-// }
-
-// type User = HeaderProps | UserType;
-
-// interface IHeaderProps  {
-//   menu?: Array<string>;
-//   pesquisar?: string;
-//   name ?: string;
-// }
-
 type HeaderProps = {
   menu?: Array<string>;
   pesquisar?: string;
@@ -83,7 +68,7 @@ export default function Header(props:HeaderProps) {
     </div>) }
     <div>
       <Input type="text" placeholder="Pesquisar"/>
-      <Button>{props.pesquisar? props.pesquisar:"Search"}</Button>
+      <Button disabled>{props.pesquisar? props.pesquisar:"Search"}</Button>
     </div>
    {/* </header> */}
    </HeaderPage>
