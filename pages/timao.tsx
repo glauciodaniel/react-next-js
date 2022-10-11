@@ -19,13 +19,13 @@ type TimaoProps = {
 export default function Timao(props:TimaoProps) {
     const [frase, setFrase] = useState<string | undefined>(props.frase)
     const [autor, setAutor] = useState<string | undefined>(props.autor)
-
+    let contador = 0;
     useEffect(()=>{
 
-        getFrase().then((data)=>{ console.log("Executou a primeira vez", data);});
+        getFrase().then((data)=>{ console.log(`Executou ${contador} vez`, data);});
+        contador++;      
        
-       
-    },[]);
+    },[frase, autor]);
 
   return (
   <>
