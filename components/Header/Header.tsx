@@ -61,7 +61,7 @@ export default function Header(props:HeaderProps) {
       <ul className={ css`
        width: 90%;
        display: inline-flex;
-       margin:0px
+       margin:0px;
        padding:0;
        > li {
         min-width: 120px;
